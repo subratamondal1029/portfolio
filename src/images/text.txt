@@ -1,0 +1,3 @@
+about text =>
+
+Hi! I’m Subrata Mondal, a passionate front-end web developer and recent graduate. I specialize in HTML, CSS, JavaScript, and frameworks like React. With hands-on experience using AI tools to enhance development, I’ve successfully completed two freelancing projects. I focus on building intuitive, responsive websites and am proficient in tools like Git, Webpack, and Figma. Dedicated to staying updated with industry trends, I’m eager to collaborate with designers and developers to bring innovative projects to life. Let’s connect and create exceptional digital experiences together!
