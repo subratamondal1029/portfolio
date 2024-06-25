@@ -28,13 +28,17 @@ html {
 body {
   height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #0c0c0c;
   color: white;
 }
 
 body > div {
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
+  animation: sds 1s ease-out 1 forwards;
 }
 
 .content {
@@ -235,23 +239,14 @@ li {
 }
 /* intro right Section is end */
 
-/* for testing only */
-#leftContainer .intro_sec {
-  display: none;
-}
-#rightContainer .intro_sec {
-  display: none;
-}
-
-
 /* hire me section styling */
 #hireme {
-  border: 1px solid red;
   padding: 2rem;
+  display: none;
 }
 
 .backBtn {
-  border: .2rem solid var(--mainColor);
+  border: 0.2rem solid var(--mainColor);
   color: var(--mainColor);
   width: 5rem;
   text-align: center;
@@ -266,19 +261,97 @@ li {
   color: #2bbb89c2;
 }
 
-#hireme h1{
-    text-transform: uppercase;
-    font-size: 4rem;
-    margin-block: 3rem;
-    margin-left: 2rem;
+#hireme h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-block: 3rem;
+  margin-left: 2rem;
 }
 
-#hireme p{
-    font-size: 1.6rem;
-    color: #898989;
-    margin-left: 2rem;
+#hireme p {
+  font-size: 1.6rem;
+  color: #898989;
+  margin-left: 2rem;
 }
 
+#hireme form {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem 2rem;
+}
+
+#hireme form .field{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding-inline: 2rem;
+}
+
+#hireme form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 0.2rem solid white;
+  background: transparent;
+  font-size: 1.7rem;
+  padding: 0.6rem 0.2rem;
+  color: white;
+  transition: all 0.5s linear;
+}
+
+#hireme form .btn{
+  margin-top: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#hireme form textarea {
+  width: 100%;
+  height: 14rem;
+  display: block;
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white; 
+  font-size: 1.7rem;
+  border-bottom: 2px solid white;
+  transition: all 0.5s linear;
+  resize: none;
+}
+
+#hireme form input:focus,
+#hireme form textarea:focus {
+  border-bottom-color: var(--mainColor);
+}
+
+/* hireme styling end */
+
+
+/* for testing only */
+/* #leftContainer .intro_sec {
+  display: none;
+}
+#rightContainer .intro_sec {
+  display: none;
+} */
 
 /* about section styling start */
 #leftContainer .about {
@@ -293,4 +366,27 @@ li {
   border: 1px solid darkred;
 
   display: none;
+}
+
+
+
+
+
+/* making animation for switch content */
+@keyframes scrollUp {
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes scrollDown {
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
 }
