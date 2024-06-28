@@ -1,0 +1,15 @@
+quiz app => 
+
+I developed a Quiz App using HTML, CSS, and JavaScript with several key features. It uses local storage to save questions, answers, and high scores, ensuring progress is maintained. The app includes a score-sharing feature with html2canvas, allowing users to take and share screenshots of their scores. Additionally, if a user quits mid-quiz, the app will remember their progress and resume from that point next time, making it user-friendly and engaging.
+
+Daily goal set =>
+
+I created a To-Do List App using HTML, CSS, and JavaScript. It features local storage to save tasks, a progress bar to show task completion, and dynamic quotes that change based on progress. Additionally, the app automatically deletes lists after the day changes, ensuring a fresh start each day. These features make the app practical, motivating, and user-friendly.
+
+music player =>
+
+I created a Music Player App using HTML, CSS, and JavaScript with several advanced features. The app supports basic controls such as play, pause, next, and previous, accessible via both keyboard and mouse. It features an advanced progress bar that dynamically updates with the music's progress, displaying both the progress time and total time of the track. Users can change the current playback time by clicking on the progress bar. The app also includes indicators for current and total music numbers. After completing a track, it automatically transitions to the next one and loops back to the first track after all have played, offering a seamless listening experience.
+
+joblist =>
+
+I created a Job List App using HTML, CSS, and JavaScript. This app lists jobs from various companies and allows users to filter jobs based on level, language, and position by clicking on tags. It supports multiple filter options, enabling users to refine their search effectively and find the most relevant job opportunities. This feature-rich app enhances the job search experience, making it more efficient and user-friendly.
