@@ -404,12 +404,12 @@ input[type=number] {
 
 /* work section styling start here  */
 
-#leftContainer .work h1{
+ .work h1{
  margin-left: 5rem;
- margin-top: 3rem;
+ padding-top: 3rem;
  font-size: 5rem;
 }
-#leftContainer .work #ownProjects{
+ .work > div{
  margin-top: 3rem;
  display: flex;
  flex-direction: column;
@@ -419,38 +419,35 @@ input[type=number] {
  width: 100%;
 }
 
-#ownProjects .project{
+ .project{
   width: 100%;
   position: relative;
   text-align: center;
   overflow: hidden;
 } 
 
-#ownProjects .project img{
+ .project img{
   width: 80%;
 }
 
-#ownProjects .project img:nth-child(1){
+.project .projectImageText{
   position: absolute;
-  top: 0;
-  left: 100%;
+  left: 10.1%;
+  top: -100%;
   transition: all .5s ease-in-out;
 }
 
-#ownProjects .project:nth-child(even) img:nth-child(1){
-  left: 100%;
-}
-#ownProjects .project:nth-child(odd) img:nth-child(1){
-  left: -100%;
-}
 
-#ownProjects .project:hover  img:nth-child(1){
-  left: 10.1%;
-}
+.project:hover .projectImageText{
+  top: 0;
+} 
+
 
 #rightContainer .work{
   background-color: var(--bgcolor);
+  padding-top: 8.5rem;
 }
+
 
 
 /* making animation for switch content */

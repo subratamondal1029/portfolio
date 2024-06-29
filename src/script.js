@@ -16,9 +16,6 @@ const typed = new Typed("#autotext", {
   showCursor: true,
 });
 
-// show project text 
-
-
 
 
 // scripting for switch content
