@@ -24,3 +24,63 @@ images.forEach((img) => img.setAttribute('loading', "lazy"))
 const leftContainer = document.getElementById('leftContainer')
 const rightContainer = document.getElementById('rightContainer')
 
+const switchBtns = document.querySelectorAll('.switchBtn')
+switchBtns.forEach((btn) =>{
+  btn.addEventListener('click', (e) =>{
+    e.preventDefault()
+    const className = btn.textContent.toLowerCase().replaceAll(' ', '')
+    
+    const leftContent = leftContainer.querySelector(`.${className}`)
+    const rightContent = rightContainer.querySelector(`.${className}`)
+
+    if (leftContent) {
+      leftContent.style.display = "block"
+
+      if(leftContent && !rightContent){
+        leftContainer.style.animationName = "scrollUp"
+      }else{
+        leftContainer.style.animationName = "scrollDown"
+      }
+      
+    }
+    if(rightContent){
+      rightContent.style.display = "block"
+        rightContainer.style.animationName = "scrollUp"
+    }
+
+  })
+})
+
+
+// back content scripting 
+const backBtns = document.querySelectorAll('.backBtn')
+
+backBtns.forEach((btn) =>{
+btn.addEventListener('click', () =>{
+  const parent = btn.parentElement
+  const className = parent.classList[1]
+
+  const leftContent = leftContainer.querySelector(`.${className}`)
+  const rightContent = rightContainer.querySelector(`.${className}`)
+
+  if(leftContent){
+
+      if(leftContent && !rightContent){
+        leftContainer.style.animationName = "scrollDown"
+      }else{
+        leftContainer.style.animationName = "scrollUp"
+      }
+
+
+    setTimeout(() => {
+      leftContent.style.display = "none"
+       leftContainer.style.animationName = "none"
+    },600)
+  }
+  if(rightContent){
+    rightContainer.style.animationName = "scrollDown"
+    setTimeout(() => rightContent.style.display = "none",600)
+  }
+})
+})
+
