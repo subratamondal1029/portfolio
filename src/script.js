@@ -16,7 +16,9 @@ const typed = new Typed("#autotext", {
   showCursor: true,
 });
 
-
+// adding lazi loading in image
+const images = document.querySelectorAll('img')
+images.forEach((img) => img.setAttribute('loading', "lazy"))
 
 // scripting for switch content
 const leftContainer = document.getElementById('leftContainer')
