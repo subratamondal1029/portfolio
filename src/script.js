@@ -47,7 +47,7 @@ switchBtns.forEach((btn) =>{
       rightContent.style.display = "block"
         rightContainer.style.animationName = "scrollUp"
     }
-
+  toggleScrolBar('block')
   })
 })
 
@@ -81,6 +81,29 @@ btn.addEventListener('click', () =>{
     rightContainer.style.animationName = "scrollDown"
     setTimeout(() => rightContent.style.display = "none",600)
   }
+
+  toggleScrolBar('none')
 })
 })
 
+//scroll indicator for content 
+
+function toggleScrolBar(displayVal){
+  document.querySelectorAll('.scrollBar').forEach((bar) =>bar.style.display = displayVal)
+}
+
+
+const leftWork = leftContainer.querySelector('.works')
+const rightWork = rightContainer.querySelector('.works')
+
+leftWork.addEventListener('scroll', scrollPage)
+rightWork.addEventListener('scroll', scrollPage)
+
+function scrollPage() {
+  const container = this
+
+  const conScroll = container.scrollTop
+  const height = container.scrollHeight - container.clientHeight;
+  const scrolled = (conScroll / height) * 100;
+  container.parentElement.querySelector('.progress').style.height = scrolled + "%";
+}
