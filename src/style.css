@@ -443,10 +443,11 @@ input[type=number] {
   left: 10.1%;
   top: -100%;
   transition: all .5s ease-in-out;
+  pointer-events: none;
 }
 
 
-.project:hover .projectImageText{
+.projectImage:hover + .projectImageText{
   top: 0;
 } 
 
